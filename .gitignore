@@ -37,3 +37,5 @@ htmlcov/
 .env.local
 .design-grind/
 .playwright-cli/
+noctalia-plugin/gauges/
+gnome-shell-extension/schemas/gschemas.compiled

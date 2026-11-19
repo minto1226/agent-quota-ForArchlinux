@@ -49,6 +49,16 @@ The GNOME popup is delivered by a **GNOME Shell extension**. It supports GNOME 5
 gnome-extensions enable agent-quota@torridfish
 ```
 
+### Noctalia popup (Arch Linux / Wayland)
+
+For [Noctalia](https://noctalia.dev) v5.4+ (`plugin_api = 43`), a native Luau bar widget and attached popup panel are included under `noctalia-plugin/` with 1:1 240° arc SVG gauges and provider cards:
+
+```bash
+./install-noctalia-plugin.sh
+```
+
+The installer installs the `agent-quota` Python backend via `uv`, copies the plugin into `~/.config/noctalia/plugins/agent-quota`, registers the local plugin source, and enables `torridfish/agent-quota` in the running Noctalia instance. Add `"torridfish/agent-quota:widget"` to your bar widget list (e.g. `bar.default.end`) to display the gauge indicator on the bar.
+
 The installer packages the Python backend into the extension and refreshes the matching global `agent-quota` command, keeping terminal and popup output in sync. `uv` is required. The browser settings server uses the system `/usr/bin/python3` with PyGObject (`python3-gi`); on Debian/Ubuntu install it with:
 
 ```bash

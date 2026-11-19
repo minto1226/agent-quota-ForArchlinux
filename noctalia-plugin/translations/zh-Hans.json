@@ -1,0 +1,39 @@
+{
+  "name": "Agent Quota",
+  "description": "监控 AI 编程助手的订阅配额窗口、速率限制与账户余额",
+  "settings": {
+    "refresh_seconds": {
+      "label": "自动刷新间隔 (秒)",
+      "description": "后台调用 agent-quota --json 更新配额状态的间隔秒数"
+    },
+    "warning_threshold": {
+      "label": "警告阈值 (%)",
+      "description": "剩余百分比低于或等于此值时圆弧转为黄色"
+    },
+    "critical_threshold": {
+      "label": "危急阈值 (%)",
+      "description": "剩余百分比低于或等于此值时圆弧转为红色"
+    },
+    "show_user_info": {
+      "label": "显示账户名称",
+      "description": "在卡片标题右侧显示关联邮箱或用户名"
+    },
+    "show_org_name": {
+      "label": "显示组织/工作区名称",
+      "description": "在 Team / Business 计划后附加显示工作区名称"
+    },
+    "gauge_percent_mode": {
+      "label": "圆弧数值格式",
+      "description": "仪表盘中央显示的剩余额度格式",
+      "options": {
+        "number": "纯数字 (100)",
+        "percent": "百分比 (100%)",
+        "hidden": "隐藏数值"
+      }
+    },
+    "show_reset_when_full": {
+      "label": "满额时仍显示重置倒数",
+      "description": "当额度为 100% 时依然在下方显示重置倒计时"
+    }
+  }
+}

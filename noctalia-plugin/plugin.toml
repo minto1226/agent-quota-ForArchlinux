@@ -1,0 +1,92 @@
+id = "torridfish/agent-quota"
+name = "Agent Quota"
+version = "1.0.0"
+plugin_api = 43
+author = "minto"
+license = "MIT"
+tags = ["ai", "bar", "panel", "service", "utility"]
+icon = "gauge"
+description = "Track AI coding tool subscription windows, rate limits, and balances"
+
+[[setting]]
+key = "refresh_seconds"
+type = "int"
+label_key = "settings.refresh_seconds.label"
+description_key = "settings.refresh_seconds.description"
+default = 60
+min = 15
+max = 3600
+step = 15
+
+[[setting]]
+key = "warning_threshold"
+type = "int"
+label_key = "settings.warning_threshold.label"
+description_key = "settings.warning_threshold.description"
+default = 30
+min = 5
+max = 95
+step = 5
+
+[[setting]]
+key = "critical_threshold"
+type = "int"
+label_key = "settings.critical_threshold.label"
+description_key = "settings.critical_threshold.description"
+default = 10
+min = 1
+max = 90
+step = 1
+
+[[setting]]
+key = "show_user_info"
+type = "bool"
+label_key = "settings.show_user_info.label"
+description_key = "settings.show_user_info.description"
+default = false
+
+[[setting]]
+key = "show_org_name"
+type = "bool"
+label_key = "settings.show_org_name.label"
+description_key = "settings.show_org_name.description"
+default = false
+
+[[setting]]
+key = "gauge_percent_mode"
+type = "select"
+label_key = "settings.gauge_percent_mode.label"
+description_key = "settings.gauge_percent_mode.description"
+default = "number"
+options = [
+  { value = "number", label_key = "settings.gauge_percent_mode.options.number" },
+  { value = "percent", label_key = "settings.gauge_percent_mode.options.percent" },
+  { value = "hidden", label_key = "settings.gauge_percent_mode.options.hidden" },
+]
+
+[[setting]]
+key = "show_reset_when_full"
+type = "bool"
+label_key = "settings.show_reset_when_full.label"
+description_key = "settings.show_reset_when_full.description"
+default = true
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 436
+height = "content"
+max_height = 680
+placement = "attached"
+open_near_click = true
+
+[[widget]]
+id = "widget"
+entry = "widget.luau"
+
+[widget.actions]
+middle = "none"

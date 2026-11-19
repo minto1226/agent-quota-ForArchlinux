@@ -1,0 +1,39 @@
+{
+  "name": "Agent Quota",
+  "description": "Track AI coding tool subscription windows, rate limits, and balances",
+  "settings": {
+    "refresh_seconds": {
+      "label": "Refresh Interval (seconds)",
+      "description": "Background polling interval for agent-quota --json"
+    },
+    "warning_threshold": {
+      "label": "Warning Threshold (%)",
+      "description": "Remaining percentage that turns gauges yellow"
+    },
+    "critical_threshold": {
+      "label": "Critical Threshold (%)",
+      "description": "Remaining percentage that turns gauges red"
+    },
+    "show_user_info": {
+      "label": "Show User Information",
+      "description": "Show account name next to each provider plan in the popup"
+    },
+    "show_org_name": {
+      "label": "Show Organization Names",
+      "description": "Append workspace name to Team/Business plan labels"
+    },
+    "gauge_percent_mode": {
+      "label": "Gauge Percentage Text",
+      "description": "Format of the value inside the gauge opening",
+      "options": {
+        "number": "Number (100)",
+        "percent": "Percent (100%)",
+        "hidden": "Hidden"
+      }
+    },
+    "show_reset_when_full": {
+      "label": "Show Reset Time When Full",
+      "description": "Show reset countdown even when a gauge is at 100%"
+    }
+  }
+}
