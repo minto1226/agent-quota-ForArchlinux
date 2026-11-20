@@ -306,7 +306,8 @@ uv run python -m providers.colab
 
 ## Credits
 
-Originally based on [waybar-ai-usage](https://github.com/NihilDigit/waybar-ai-usage) by [@NihilDigit](https://github.com/NihilDigit).
+- Upstream project: [agent-quota](https://github.com/torridfish/agent-quota) by [@torridfish](https://github.com/torridfish)
+- Originally based on [waybar-ai-usage](https://github.com/NihilDigit/waybar-ai-usage) by [@NihilDigit](https://github.com/NihilDigit)
 
 ## License
 
